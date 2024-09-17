@@ -1,0 +1,24 @@
+@page
+@model StudentInfoApp.Pages.Students.CreateModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h1>新增學生</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Student.Name"></label>
+        <input asp-for="Student.Name" class="form-control" />
+        <span asp-validation-for="Student.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Student.Class"></label>
+        <input asp-for="Student.Class" class="form-control" />
+        <span asp-validation-for="Student.Class" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Student.SeatNumber"></label>
+        <input asp-for="Student.SeatNumber" class="form-control" />
+        <span asp-validation-for="Student.SeatNumber" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">儲存</button>
+</form>
